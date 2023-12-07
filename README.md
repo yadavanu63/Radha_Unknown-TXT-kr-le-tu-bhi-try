@@ -9,4 +9,4 @@
 
 ## Deploy To Heroku
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/LPRPDV/Unknown-TXT-kr-le-tu-bhi-try)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/editxd/Unknown-TXT-kr-le-tu-bhi-try)
