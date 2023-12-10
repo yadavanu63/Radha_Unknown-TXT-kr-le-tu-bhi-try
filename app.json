@@ -56,17 +56,15 @@
 
     },
 
-    "buildpacks": [
-
+    "buildpacks":[
         {
-
-            "url": "heroku/python"
-
-        },
-       {
             "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-       }
-       
-    ]
+        },
+        {
+            "url": "https://github.com/amivin/aria2-heroku.git"
+        },
+        {
+            "url": "heroku/python"
+        }
 
 }
