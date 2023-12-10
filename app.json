@@ -40,6 +40,13 @@
             "description": "Your API_ID from https://my.telegram.org/apps"
 
         },
+        
+        "AUTH_USERS": {
+
+            "description": "Auth User Id"
+
+            },
+
 
         "API_HASH": {
 
