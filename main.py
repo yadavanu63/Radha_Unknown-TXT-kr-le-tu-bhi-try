@@ -36,14 +36,14 @@ async def account_login(bot: Client, m: Message):
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
-    await m.reply_text("**STOPPED**😕", True)
+    await m.reply_text("**𝐒𝐓𝐎𝐏𝐏𝐄𝐃**😕", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 
 @bot.on_message(filters.command(["Radha"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('𝐇𝐥𝐨 𝐉𝐚𝐚𝐧 💜 𝐈 𝐀𝐦 𝐑𝐚𝐝𝐡𝐚 𝐁𝐨𝐭 ....  Send 𝐓𝐗𝐓 file for download')
+    editable = await m.reply_text('𝐇𝐥𝐨 𝐉𝐚𝐚𝐧 💜 𝐈 𝐀𝐦 𝐑𝐚𝐝𝐡𝐚 𝐁𝐨𝐭 ....😊  Send  "𝐓𝐗𝐓"  file for download')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -72,13 +72,13 @@ async def account_login(bot: Client, m: Message):
     raw_text = input0.text
     await input0.delete(True)
 
-    await editable.edit("**𝐉𝐚𝐚𝐧 💜 Enter 𝐁𝐀𝐓𝐂𝐇 Name**")
+    await editable.edit("**𝐉𝐚𝐚𝐧 💜 Enter  "𝐁𝐀𝐓𝐂𝐇"  Name**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
     
 
-    await editable.edit("**𝐉𝐀𝐀𝐍👀 Enter 𝟑𝟔𝟎,𝟒𝟖𝟎,𝟕𝟐𝟎 resolution**")
+    await editable.edit("**𝐉𝐀𝐀𝐍👀 Enter  𝟑𝟔𝟎,𝟒𝟖𝟎,𝟕𝟐𝟎  resolution**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     await input2.delete(True)
@@ -119,7 +119,7 @@ async def account_login(bot: Client, m: Message):
     await editable.delete()
 
     thumb = input6.text
-    if thumb.startswith("http://") or thumb.startswith("https://"):
+    if thumb.startswith("http://") or thumb.startswith("https://telegra.ph/file/89943fcb89e218d3d87fd.jpg"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
         thumb = "thumb.jpg"
     else:
@@ -164,8 +164,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**𝐕𝐈𝐃_𝐈𝐃  »** {str(count).zfill(3)}\n**𝐓𝐈𝐓𝐋𝐄  »** {name1} {res}.mkv\n**𝐁𝐀𝐓𝐂𝐇 »** {raw_text0}\n\n'
-                cc1 = f'**𝐕𝐈𝐃_𝐈𝐃  »** {str(count).zfill(3)}\n**𝐓𝐈𝐓𝐋𝐄 »** {name1}.pdf \n**𝐁𝐀𝐓𝐂𝐇 »** {raw_text0}\n\n'
+                cc = f'**[📺]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}\n**[📝]𝐓𝐈𝐓𝐋𝐄  ➤** {name1} {res}.mkv\n**[♦]𝐁𝐀𝐓𝐂𝐇 ➤** {raw_text0}\n\n'
+                cc1 = f'**[📺]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}\n**[📝]𝐓𝐈𝐓𝐋𝐄 ➤** {name1}.pdf \n**[♦]𝐁𝐀𝐓𝐂𝐇 ➤** {raw_text0}\n\n'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -191,7 +191,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**📩𝐃𝐎𝐖𝐍𝐋𝐎𝐃𝐈𝐍𝐆📩 » @zone_sr **\n\n**📑𝐍𝐀𝐌𝐄 »** `{name}\n🍀𝐐𝐔𝐀𝐋𝐈𝐓𝐘 » {raw_text2}`\n\n**📎𝐔𝐑𝐋 :-** `{url}`"
+                    Show = f"**📥𝐃𝐎𝐖𝐍𝐋𝐎𝐃𝐈𝐍𝐆📥 » @zone_sr **\n\n**📑𝐍𝐀𝐌𝐄 »** `{name}\n🍀𝐐𝐔𝐀𝐋𝐈𝐓𝐘 » {raw_text2}`\n\n**📎𝐔𝐑𝐋 :-** `{url}`"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
