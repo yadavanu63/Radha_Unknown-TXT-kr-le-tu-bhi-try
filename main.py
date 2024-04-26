@@ -43,7 +43,7 @@ async def restart_handler(_, m):
 
 @bot.on_message(filters.command(["Radha"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('𝐇𝐥𝐨 𝐉𝐚𝐚𝐧 💜 𝐈 𝐀𝐦 𝐑𝐚𝐝𝐡𝐚 𝐁𝐨𝐭 ....😊  Send  "𝐓𝐗𝐓"  file for download')
+    editable = await m.reply_text('𝐇𝐥𝐨 𝐉𝐚𝐚𝐧 💜 𝐈 𝐀𝐦 𝐑𝐚𝐝𝐡𝐚 𝐁𝐨𝐭 ....😊  Send  𝐓𝐗𝐓 file for download')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -72,7 +72,7 @@ async def account_login(bot: Client, m: Message):
     raw_text = input0.text
     await input0.delete(True)
 
-    await editable.edit("**𝐉𝐚𝐚𝐧 💜 Enter  "𝐁𝐀𝐓𝐂𝐇"  Name**")
+    await editable.edit("**𝐉𝐚𝐚𝐧 💜 Enter  𝐁𝐀𝐓𝐂𝐇  Name**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
