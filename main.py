@@ -164,8 +164,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[📺]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}\n**[📝]𝐓𝐈𝐓𝐋𝐄  ➤** {name1} {res}.mkv\n**[♦]𝐁𝐀𝐓𝐂𝐇 ➤** {raw_text0}\n\n'
-                cc1 = f'**[📺]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}\n**[📝]𝐓𝐈𝐓𝐋𝐄 ➤** {name1}.pdf \n**[♦]𝐁𝐀𝐓𝐂𝐇 ➤** {raw_text0}\n\n'
+                cc = f'**[📺]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}\n**[📝]𝐓𝐈𝐓𝐋𝐄  ➤** {name1} {res}ㅤ𓆩🖤𓆪 ❀ 𝐑α∂ɦα .mkv\n**[♦]𝐁𝐀𝐓𝐂𝐇 ➤** {raw_text0}\n\n'
+                cc1 = f'**[📺]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}\n**[📝]𝐓𝐈𝐓𝐋𝐄 ➤** {name1}ㅤ𓆩🖤𓆪 ❀ 𝐑α∂ɦαㅤ.pdf \n**[♦]𝐁𝐀𝐓𝐂𝐇 ➤** {raw_text0}\n\n'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -208,7 +208,7 @@ async def account_login(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("Done")
+    await m.reply_text("𝐃𝐎𝐍𝐄 𝐁𝐘 𝐑𝐀𝐃𝐇𝐀💚")
 
 
 bot.run()
