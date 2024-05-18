@@ -98,14 +98,15 @@ async def account_login(bot: Client, m: Message):
     
     
 
-   await editable.edit("**𝔼ɴᴛᴇʀ Your Name or send**")
+  await editable.edit("**𝔼ɴᴛᴇʀ Your Name or send.**")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
-    if raw_text3 == 'de':
-        CR = credit
+    highlighter  = f"️ ⁪⁬⁮⁮⁮"
+    if raw_text3 == 'no':
+        MR = highlighter 
     else:
-        CR = raw_text3
+        MR = raw_text3
    
     await editable.edit("Now send the **Thumb url**\nEg : ``````\n\nor Send `no`")
     input6 = message = await bot.listen(editable.chat.id)
@@ -159,8 +160,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-               cc = f'**[🎬] Vid_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {name1} ({res}) Tapori 🥷.mkv\n**Bᴀᴛᴄʜ** »** {b_name}\n\n**Downloaded by » {CR}**\n@taporibot_bot**'
-                cc1 = f'**[📕] Pdf_ID:** {str(count).zfill(3)}.**Tɪᴛʟᴇ » {name1} Tapori 🥷.pdf \n**Bᴀᴛᴄʜ** »**{b_name}\n\n**Downloaded by » {CR}**\n@taporibot_bot**'
+               cc = f'**[🎬] Vid_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {name1} ({res}) Tapori 🥷.mkv\n**Bᴀᴛᴄʜ** »** {b_name}\n\n**Downloaded by » {MR}**\n@taporibot_bot**'
+                cc1 = f'**[📕] Pdf_ID:** {str(count).zfill(3)}.**Tɪᴛʟᴇ » {name1} Tapori 🥷.pdf \n**Bᴀᴛᴄʜ** »**{b_name}\n\n**Downloaded by » {MR}**\n@taporibot_bot**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
