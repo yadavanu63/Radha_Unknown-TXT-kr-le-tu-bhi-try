@@ -161,8 +161,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[🎬]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}.\n **[📝]𝐓𝐈𝐓𝐋𝐄  ➤** {𝗻𝗮𝗺𝗲𝟭} ({res})𓆩🖤𓆪Tapori 🥷.mkv\n\n **[♦]𝐁𝐀𝐓𝐂𝐇 ➤**{raw_text0}\n\n**Downloaded by ➤ {MR}**\n@taporibot_bot**'
-                cc1 = f'**[📕]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}.\n **[📝]𝐓𝐈𝐓𝐋𝐄  ➤** {𝗻𝗮𝗺𝗲𝟭}𓆩🖤𓆪Tapori 🥷.pdf \n\n **[♦]𝐁𝐀𝐓𝐂𝐇 ➤**{raw_text0}\n\n**Downloaded by ➤ {MR}**\n@taporibot_bot**'
+                cc = f'**[🎬]𝐕𝐈𝐃_𝐈𝐃 [🤖] ➤** {str(count).zfill(3)}.\n **[📝]𝐓𝐈𝐓𝐋𝐄  ➤** {𝗻𝗮𝗺𝗲𝟭} ({res})𓆩🖤𓆪Tapori 🥷.mkv\n\n **[♦]𝐁𝐀𝐓𝐂𝐇 ➤**{raw_text0}\n\n**Downloaded by ➤ {MR}**\n@taporibot_bot**'
+                cc1 = f'**[📕]𝐕𝐈𝐃_𝐈𝐃 [🤖] ➤** {str(count).zfill(3)}.\n **[📝]𝐓𝐈𝐓𝐋𝐄  ➤** {𝗻𝗮𝗺𝗲𝟭}𓆩🖤𓆪Tapori 🥷.pdf \n\n **[♦]𝐁𝐀𝐓𝐂𝐇 ➤**{raw_text0}\n\n**Downloaded by ➤ {MR}**\n@taporibot_bot**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
