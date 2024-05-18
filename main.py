@@ -99,7 +99,7 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("Now Enter A Caption to add caption on your uploaded file")
+    await editable.edit("𝔼ɴᴛᴇʀ Your Name or send")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -161,8 +161,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[🎬] Vid_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {𝗻𝗮𝗺𝗲𝟭} ({res}){MR}.mkv\n\n **Bᴀᴛᴄʜ** » **{raw_text0}**'
-                cc1 = f'**[📕] Pdf_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n\n **Bᴀᴛᴄʜ** » **{raw_text0}**'
+                cc = f'**[🎬]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}.\n **[📝]𝐓𝐈𝐓𝐋𝐄  ➤** {𝗻𝗮𝗺𝗲𝟭} ({res})𓆩🖤𓆪Tapori 🥷.mkv\n\n **[♦]𝐁𝐀𝐓𝐂𝐇 ➤**{raw_text0}\n\n**Downloaded by ➤ {MR}**\n@taporibot_bot**'
+                cc1 = f'**[📕]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}.\n **[📝]𝐓𝐈𝐓𝐋𝐄  ➤** {𝗻𝗮𝗺𝗲𝟭}𓆩🖤𓆪Tapori 🥷.pdf \n\n **[♦]𝐁𝐀𝐓𝐂𝐇 ➤**{raw_text0}\n\n**Downloaded by ➤ {MR}**\n@taporibot_bot**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
