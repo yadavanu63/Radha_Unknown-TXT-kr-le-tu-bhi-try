@@ -23,32 +23,30 @@ import os
 
 bot = Client(
     "bot",
-    bot_token=os.environ.get("BOT_TOKEN"),
-    api_id=int(os.environ.get("API_ID")),
-    api_hash=os.environ.get("API_HASH")
-)
+    api_id=api_id,
+    api_hash=api_hash,
+    bot_token=bot_token)
 
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /Radha")
+    editable = await m.reply_text("Hey Freind 😎 I Am A Bot For Download Links From Your **.TXT** File. \n\n **Bot Made By Surya Bishnoi 🚩** \n Send me /BISHNOI Command And Follow Steps..")
 
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
-    await m.reply_text("**𝐒𝐓𝐎𝐏𝐏𝐄𝐃**😕", True)
+    await m.reply_text("**Stopped**⚠️", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 
-@bot.on_message(filters.command(["Radha"]))
+@bot.on_message(filters.command(["srishti"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('𝐇𝐥𝐨 𝐉𝐚𝐚𝐧 💜 𝐈 𝐀𝐦 𝐑𝐚𝐝𝐡𝐚 𝐁𝐨𝐭 ....😊  Send  𝐓𝐗𝐓 file for download')
+    editable = await m.reply_text('Send me **TXT File**⚡️')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
+    await bot.send_document(--1002095173433, x)
     await input.delete(True)
-
-
 
     path = f"./downloads/{m.chat.id}"
 
@@ -62,23 +60,23 @@ async def account_login(bot: Client, m: Message):
        os.remove(x)
             # print(len(links)
     except:
-           await m.reply_text("Invalid file input.")
+           await m.reply_text("**Invalid file input.**")
            os.remove(x)
            return
     
    
-    await editable.edit(f"Total links found are **{len(links)}**\n\nSend From where you want to download initial is **1**")
+    await editable.edit(f"**𝕋ᴏᴛᴀʟ ʟɪɴᴋ𝕤 ғᴏᴜɴᴅ ᴀʀᴇ🔗🔗** **{len(links)}**\n\n**𝕊ᴇɴᴅ 𝔽ʀᴏᴍ ᴡʜᴇʀᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ɪɴɪᴛɪᴀʟ ɪ𝕤** **1**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text = input0.text
     await input0.delete(True)
 
-    await editable.edit("**𝐉𝐚𝐚𝐧 💜 Enter  𝐁𝐀𝐓𝐂𝐇  Name**")
+    await editable.edit("**Send Me Your Batch Name**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
     
 
-    await editable.edit("**𝐉𝐀𝐀𝐍👀 Enter  𝟑𝟔𝟎,𝟒𝟖𝟎,𝟕𝟐𝟎  resolution**")
+    await editable.edit("**𝔼ɴᴛᴇʀ ʀᴇ𝕤ᴏʟᴜᴛɪᴏɴ📸**\n144,240,360,480,720,1080 please choose quality")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     await input2.delete(True)
@@ -102,24 +100,24 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("**Enter A Highlighter Otherwise send 👉no👈 **")
+    await editable.edit("Now Enter A Caption to add caption on your uploaded file")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
     highlighter  = f"️ ⁪⁬⁮⁮⁮"
-    if raw_text3 == 'no':
+    if raw_text3 == 'Robin':
         MR = highlighter 
     else:
         MR = raw_text3
    
-    await editable.edit("𝐉𝐚𝐚𝐧 💎 Now send the **𝐓𝐡𝐮𝐦𝐛 𝐔𝐑𝐋**\nEg : ```https://telegra.ph/file/89943fcb89e218d3d87fd.jpg```\n\nor Send `no`")
+    await editable.edit("Now send the Thumb url/nEg » https://telegra.ph/file/1bf523c4b51530e57e84d.jpg \n Or if don't want thumbnail send = no")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
     await editable.delete()
 
     thumb = input6.text
-    if thumb.startswith("http://") or thumb.startswith("https://telegra.ph/file/89943fcb89e218d3d87fd.jpg"):
+    if thumb.startswith("http://") or thumb.startswith("https://"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
         thumb = "thumb.jpg"
     else:
@@ -145,46 +143,6 @@ async def account_login(bot: Client, m: Message):
             elif 'videos.classplusapp' in url:
              url = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers={'x-access-token': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgzNjkyMTIsIm9yZ0lkIjoyNjA1LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTcwODI3NzQyODkiLCJuYW1lIjoiQWNlIiwiZW1haWwiOm51bGwsImlzRmlyc3RMb2dpbiI6dHJ1ZSwiZGVmYXVsdExhbmd1YWdlIjpudWxsLCJjb3VudHJ5Q29kZSI6IklOIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJpYXQiOjE2NDMyODE4NzcsImV4cCI6MTY0Mzg4NjY3N30.hM33P2ai6ivdzxPPfm01LAd4JWv-vnrSxGXqvCirCSpUfhhofpeqyeHPxtstXwe0'}).json()['url']
 
-            if "jwplayer" in url:
-                headers = {
-                    'Host': 'api.classplusapp.com',
-                    'x-access-token':
-                    'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgzNjkyMTIsIm9yZ0lkIjoyNjA1LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTcwODI3NzQyODkiLCJuYW1lIjoiQWNlIiwiZW1haWwiOm51bGwsImlzRmlyc3RMb2dpbiI6dHJ1ZSwiZGVmYXVsdExhbmd1YWdlIjpudWxsLCJjb3VudHJ5Q29kZSI6IklOIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJpYXQiOjE2NDMyODE4NzcsImV4cCI6MTY0Mzg4NjY3N30.hM33P2ai6ivdzxPPfm01LAd4JWv-vnrSxGXqvCirCSpUfhhofpeqyeHPxtstXwe0',
-                    'user-agent': 'Mobile-Android',
-                    'app-version': '1.4.37.1',
-                    'api-version': '18',
-                    'device-id': '5d0d17ac8b3c9f51',
-                    'device-details':
-                    '2848b866799971ca_2848b8667a33216c_SDK-30',
-                    'accept-encoding': 'gzip',
-                }
-
-                params = (('url', f'{url}'), )
-
-                response = requests.get(
-                    'https://api.classplusapp.com/cams/uploader/video/jw-signed-url',
-                    headers=headers,
-                    params=params)
-                # print(response.json())
-                a = response.json()['url']
-                # print(a)
-
-                headers1 = {
-                    'User-Agent':
-                    'ExoPlayerDemo/1.4.37.1 (Linux;Android 11) ExoPlayerLib/2.14.1',
-                    'Accept-Encoding': 'gzip',
-                    'Host': 'cdn.jwplayer.com',
-                    'Connection': 'Keep-Alive',
-                }
-
-                response1 = requests.get(f'{a}', headers=headers1)
-
-                url1 = (response1.text).split("\n")[2]
-
-#                 url1 = b
-            else:
-                url1 = url
-            
             elif '/master.mpd' in url:
              id =  url.split("/")[-2]
              url =  "https://d26g5bnklkwsh4.cloudfront.net/" + id + "/master.m3u8"
@@ -204,8 +162,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[📺]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}\n**[📝]𝐓𝐈𝐓𝐋𝐄  ➤** {name1} {res}ㅤ𓆩🖤𓆪 ❀ 𝐑α∂ɦα .mkv\n**[♦]𝐁𝐀𝐓𝐂𝐇 ➤** {raw_text0}\n\n'
-                cc1 = f'**[📺]𝐕𝐈𝐃_𝐈𝐃 [@zone_sr] ➤** {str(count).zfill(3)}\n**[📝]𝐓𝐈𝐓𝐋𝐄 ➤** {name1}ㅤ𓆩🖤𓆪 ❀ 𝐑α∂ɦαㅤ.pdf \n**[♦]𝐁𝐀𝐓𝐂𝐇 ➤** {raw_text0}\n\n'
+                cc = f'**[🎬] Vid_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {𝗻𝗮𝗺𝗲𝟭} ({res}){MR}.mkv\n\n **Bᴀᴛᴄʜ** » **{raw_text0}**'
+                cc1 = f'**[📕] Pdf_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n\n **Bᴀᴛᴄʜ** » **{raw_text0}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -231,7 +189,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**📥𝐃𝐎𝐖𝐍𝐋𝐎𝐃𝐈𝐍𝐆📥 » @zone_sr **\n\n**📑𝐍𝐀𝐌𝐄 »** `{name}\n🍀𝐐𝐔𝐀𝐋𝐈𝐓𝐘 » {raw_text2}`\n\n**📎𝐔𝐑𝐋 :-** `{url}`"
+                    Show = f"**⏬️ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶 ⏬️... »**\n\n**🧾Name »** `{name}\n♻️Quality » {raw_text2}`\n\n**🔗URL »** `{url}`\n\n **🚩Bot made by srishti yadav ❤️**"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -242,13 +200,13 @@ async def account_login(bot: Client, m: Message):
 
             except Exception as e:
                 await m.reply_text(
-                    f"**downloading failed 🥺**\n{str(e)}\n**Name** - {name}\n**Link** - `{url}`"
+                    f"**downloading Interupted **\n{str(e)}\n**Name** » {name}\n**Link** » `{url}`"
                 )
                 continue
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("𝐃𝐎𝐍𝐄 𝐁𝐘 𝐑𝐀𝐃𝐇𝐀💚")
+    await m.reply_text("**DONE BRO 😎**")
 
 
 bot.run()
