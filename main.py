@@ -29,7 +29,7 @@ bot = Client("bot",
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("HELLO Baby🍷,\nI AM TXT DOWNLOADER\n\n BOT MADE BY:- Tapori 2.0 😇
+    editable = await m.reply_text(f"HELLO Baby🍷,\nI AM TXT DOWNLOADER\n\n BOT MADE BY:- Tapori 2.0 😇")
 
 
 @bot.on_message(filters.command("rukja"))
