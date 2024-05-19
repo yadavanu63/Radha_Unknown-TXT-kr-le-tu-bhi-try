@@ -67,15 +67,15 @@ def hrt(seconds, precision = 0):
 
     seconds = value.seconds
 
-    if seconds >= 36:
-        hours = int(seconds / 36)
+    if seconds >=  3600:
+        hours = int(seconds /  3600)
         pieces.append(f"{hours}h")
-        seconds -= hours * 36
+        seconds -= hours *  3600
 
-    if seconds >= 20:
-        minutes = int(seconds / 20)
+    if seconds >=  60:
+        minutes = int(seconds / 60)
         pieces.append(f"{minutes}m")
-        seconds -= minutes * 20
+        seconds -= minutes * 60
 
     if seconds > 0 or not pieces:
         pieces.append(f"{seconds}s")
