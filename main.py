@@ -44,7 +44,7 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('**𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
-    await bot.send_document(-1002095173433, x)
+    await bot.send_document(-1002000940862, x)
     await input.delete(True)
 
     path = f"./downloads/{m.chat.id}"
