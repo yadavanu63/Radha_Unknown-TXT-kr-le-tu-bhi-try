@@ -12,4 +12,4 @@ class Config(object):
 API_HASH = os.environ.get("API_HASH", None)
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
     AUTH_USERS= int(os.environ.get("AUTH_USERS", 0))
-LOG = -1002095173433
+LOG = -1002226781947
