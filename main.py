@@ -22,7 +22,7 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "7139260466:AAEHwNQrZnGb8fzuQhNxEvlAl6Ud5_T_ddU",
+             bot_token= "7039712051:AAFq_faxd8gQtRl7W4uB6WLemh6bjZTczjY",
              api_id=24478182,
              api_hash= "a98b5be0127986be1cc2553dbd99765e")
 
@@ -44,7 +44,7 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('**𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
-    await bot.send_document(-1002000940862, x)
+    await bot.send_document(-1002226781947, x)
     await input.delete(True)
 
     path = f"./downloads/{m.chat.id}"
